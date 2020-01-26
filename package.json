@@ -1,0 +1,37 @@
+{
+  "name": "tpr",
+  "version": "1.0.0",
+  "description": "Small NodeJs CLI tool to spread a crypto order out into a large amount of small orders. Optimizing crypto trading",
+  "author": "Daniel Fortuyn",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "lint": "./node_modules/.bin/eslint",
+    "test": "nyc --reporter=text mocha",
+    "retest": "./node_modules/.bin/mocha -w --recursive",
+    "build": "./node_modules/.bin/babel *.js --out-dir dist --source-maps && ./node_modules/.bin/babel ./src/*.js --out-dir dist --source-maps"
+  },
+  "dependencies": {
+    "ccxt": "^1.18.956",
+    "csv-writer": "^1.5.0",
+    "csvwriter": "^1.3.0",
+    "dotenv": "^8.0.0",
+    "fuzzy": "^0.1.3",
+    "input-prompt": "^1.0.0",
+    "inquirer": "^7.0.4",
+    "inquirer-autocomplete-prompt": "^1.0.1",
+    "nodemon": "^2.0.2",
+    "ololog": "^1.1.144",
+    "prompts": "^2.1.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.0.15",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.15",
+    "chai": "^3.4.0",
+    "eslint": "^6.8.0",
+    "mocha": "^7.0.1",
+    "mocha-eslint": "^6.0.0",
+    "nyc": "^15.0.0"
+  }
+}
